@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meu HTML</title>
+	<!-- colocar css -->
+	<style>
+
+		h1 {
+			background: red;
+		}
+		
+		/* o ultimo sobrescreve o primeiro */
+		/* h1 {
+			background: blue;
+		} */
+		
+		p {
+			background: blue;
+		}
+
+		/* declaração de ids começa com # */
+		#cabecalho-dois {
+			background: purple;
+		}
+
+		/* classe começa com . */
+		/* problema de especificidade: id tem prioridade maior que classe */
+		.fundo-vermelho {
+			/* !important força a classe, mas não é muito recomendável */
+			background: brown !important;
+		}
+
+		.bold {
+			color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- lembrar de sempre fechar as tags -->
+	<!-- id é um atributo único, outras tag não pode ter o mesmo id -->
+	<h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda">
+		Vai vir aqui
+	</h1>
+	<!-- tags podem ter mais de uma classe e pode repetir a classe em mais de uma tag -->
+	<h1 id="cabecalho-dois" class="fundo-vermelho">
+		Vai vir aqui
+	</h1>
+	<p>Um texto <b class="bold">qualquer</b>.</p>
+	<p>Um texto <b class="bold">qualquer</b>.</p>
+	<p>Um texto <b class="bold">qualquer</b>.</p>
+	<p>Um texto <b class="bold">qualquer</b>.</p>
+</body>
+</html>
